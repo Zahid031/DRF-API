@@ -31,7 +31,7 @@ from users import router as user_api_router
 # ]
 
 auth_api_urls = [
-    path('', include('rest_framework_social_oauth2.urls')),
+    path('', include('oauth2_provider.urls',namespace='oauth2_provider')),
 ]
 
 
