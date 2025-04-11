@@ -23,6 +23,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from users import router as user_api_router
+from house import router as house_api_router
+
 
 
 
@@ -42,6 +44,7 @@ if settings.DEBUG:
 api_url_patterns = [
     path(r'auth/',include(auth_api_urls)),
     path(r'accounts/',include(user_api_router.router.urls)),
+    path(r'house/',include(house_api_router.router.urls ))
 ]
 
 urlpatterns = [
